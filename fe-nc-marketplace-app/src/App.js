@@ -5,6 +5,7 @@ import HomeScreen from "./Home-screen";
 import ItemPage from "./Item-page";
 import Checkout from "./Checkout";
 import ReviewListing from "./Review-Listing";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

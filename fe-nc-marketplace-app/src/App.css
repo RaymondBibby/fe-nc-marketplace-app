@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+.VintageShop {
+  height: 350px;
+  width: auto;
+}
+
+.background_vintageShop {
+  background-color: black;
+}
