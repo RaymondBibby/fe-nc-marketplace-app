@@ -1,16 +1,35 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import basketimg from "../src/stock-images/basketimg.png";
 
 const NavBar = () => {
-	return (
-		<>
-			<nav>
-				<Link to="/">Home</Link>
-				<Link to="/item-page">Items</Link>
-				<Link to="/checkout">Checkout</Link>
-				<Link to="/review-listing">Review Listings</Link>
-			</nav>
-		</>
-	);
+  return (
+    <>
+      <ul>
+        <li>
+          <Link to="/" className="link">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/item-page" className="link">
+            Items
+          </Link>
+        </li>
+        <li>
+          <Link to="/review-listing" className="link">
+            Review <br /> Listings
+          </Link>
+        </li>
+        <li>
+          <Link to="/checkout" className="link">
+            {"  "}
+            Checkout{"  "}
+            <img className="basketimg" src={basketimg} alt="customer basket" />
+          </Link>
+        </li>
+      </ul>
+    </>
+  );
 };
 
 export default NavBar;

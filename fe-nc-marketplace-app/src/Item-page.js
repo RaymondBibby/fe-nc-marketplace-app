@@ -1,25 +1,31 @@
-import { useState, useEffect } from 'react';
-import getItemsForSaleById from './apiCalls';
-import Card from './card';
+import { useState, useEffect } from "react";
+import getItemsForSale from "./apiCalls";
+import Card from "./card";
 
-const ItemPage = () => {
-	const [itemId, setItemById] = useState(Math.ceil(Math.random() * 30));
-	const [items, setItems] = useState([]);
+const ItemPage = ({ setBasket }) => {
+  const [items, setItems] = useState([]);
 
-	useEffect(() => {
-		getItemsForSaleById(itemId).then(({ items }) => {
-			setItems(items);
-		});
-	}, [itemId]);
+  useEffect(() => {
+    getItemsForSale().then(({ items }) => {
+      setItems(items);
+    });
+  }, []);
 
-	console.log(items);
-
-	return (
-		<div>
-			Hello
-			{/* <Card items={items} /> */}
-		</div>
-	);
+  return (
+    <>
+      <div>
+        {items.map((itemForSale) => {
+          return (
+            <Card
+              key={itemForSale.item_id}
+              item={itemForSale}
+              setBasket={setBasket}
+            />
+          );
+        })}
+      </div>
+    </>
+  );
 };
 
 export default ItemPage;

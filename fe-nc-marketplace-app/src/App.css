@@ -40,3 +40,40 @@
 .background_vintageShop {
   background-color: black;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+.link {
+  text-decoration: none;
+  padding: 10px 12px;
+}
+
+li Link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li Link:hover {
+  background-color: #111;
+}
+
+.basketimg {
+  height: 2rem;
+}
+
+href {
+  text-decoration: none;
+}
