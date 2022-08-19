@@ -1,9 +1,19 @@
-import Card from "./card";
+import CheckoutCard from './CheckoutCard';
+import CheckOutSummary from './CheckoutSummary';
 
 const Checkout = ({ basket, setBasket }) => {
-  return basket.map((item) => {
-    return <Card item={item} setBasket={setBasket} />;
-  });
+	if (!basket.length) {
+		return <div>Basket Empty!!</div>;
+	}
+
+	return (
+		<>
+			<CheckOutSummary basket={basket} />
+			{basket.map((item) => {
+				return <CheckoutCard item={item} />;
+			})}
+		</>
+	);
 };
 
 export default Checkout;
