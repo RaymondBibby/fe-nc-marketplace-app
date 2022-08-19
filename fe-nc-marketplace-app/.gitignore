@@ -22,4 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+<<<<<<< HEAD
 /src/stock-images
+=======
+/src/stock-images*
+>>>>>>> ce01a4936a6765a73a540c5b204b9ab99d70e936

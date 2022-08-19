@@ -6,17 +6,24 @@ import ItemPage from "./Item-page";
 import Checkout from "./Checkout";
 import ReviewListing from "./Review-Listing";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <Header />
       <NavBar />
-      <HomeScreen />
-      <ItemPage />
-      <Checkout />
-      <ReviewListing />
+      <Routes>
+          <Route path="/" element={<HomeScreen />}/>
+          <Route path="/item-page" element={<ItemPage />}/>
+          <Route path="/checkout" element={<Checkout />}/>
+          <Route path="/review-listing" element={ <ReviewListing />}/>
+
+     </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
